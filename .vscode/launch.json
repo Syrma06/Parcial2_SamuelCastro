@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Iniciar Chrome para Frontend",
+            "url": "http://localhost:5000",  // Puerto del backend Flask
+            "webRoot": "${workspaceFolder}/frontend",  // Ruta del frontend
+            "preLaunchTask": "python: start backend",  // Inicia el backend primero (requiere task)
+            "userDataDir": false,
+            "runtimeArgs": [
+                "--disable-extensions",  // Desactiva extensiones
+                "--auto-open-devtools-for-tabs"  // Abre DevTools automáticamente
+            ]
+        }
+    ]
+}
